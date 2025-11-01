@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Questions Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Study Questions Library</h1>
+    <p>Download And Preview Questions And Their Solutions</p>
+  </header>
+
+  <input type="text" id="searchBar" placeholder="🔍 Search for a chapter...">
+
+  <main>
+    <!-- Maths -->
+    <details>
+      <summary>Mathematics</summary>
+      <ul>
+        <li>
+          <span>Chapter 8: Trignometry</span>
+          <div class="links">
+            <a href="maths/tri/m-8-questions.pdf" target="_blank">📄 Preview Question</a>
+            <a href="maths/tri/m-8-solutions.pdf" target="_blank">📘 Preview Answers</a>
+            <a href="maths/tri/m-8-questions.pdf" download>⬇️ Question Download</a>
+            <a href="maths/tri/m-8-solutions.pdf" download>⬇️ Answer Download</a>
+          </div>
+        </li>
+      </ul>
+    </details>
+
+    <!-- Science -->
+    <details>
+      <summary>Science</summary>
+      <ul>
+      </ul>
+    </details>
+
+    <!-- English -->
+    <details>
+      <summary>English</summary>
+      <ul>
+      </ul>
+    </details>
+
+    <!-- SSC -->
+    <details>
+      <summary>Social Science (SSC)</summary>
+      <ul>
+      </ul>
+    </details>
+  </main>
+
+  <footer>
+    <p>Made with 🧠 by Neelesh Of 10th A3</p>
+  </footer>
+
+  <script>
+    // 🔍 Search filter
+    const searchBar = document.getElementById("searchBar");
+    searchBar.addEventListener("input", () => {
+      const query = searchBar.value.toLowerCase();
+      const items = document.querySelectorAll("li");
+      items.forEach(li => {
+        const text = li.textContent.toLowerCase();
+        li.style.display = text.includes(query) ? "flex" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
